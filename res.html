@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Yaswanth</title>
+  <style>
+    /* Base Styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #cce3dc, #e8eddf);
+      margin: 0;
+      padding: 40px 15px;
+      transition: background 0.3s ease;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .resume {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      padding: 30px 40px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .header h1 {
+      font-size: 2em;
+      color: #2e7d32;
+      margin: 0;
+    }
+
+    .header p {
+      margin: 4px 0;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #4caf50;
+    }
+
+    h2 {
+      border-left: 4px solid #4caf50;
+      padding-left: 10px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      color: #388e3c;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 0;
+    }
+
+    a {
+      color: #1e88e5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    #toggle-theme {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 25px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    #toggle-theme:hover {
+      background-color: #43a047;
+    }
+
+    /* Dark Mode */
+    body.dark-mode {
+      background: linear-gradient(to right, #2e2e2e, #1c1c1c);
+      color: #eee;
+    }
+
+    body.dark-mode .resume {
+      background: #2a2a2a;
+      color: #f1f1f1;
+    }
+
+    body.dark-mode a {
+      color: #80d8ff;
+    }
+
+    body.dark-mode h2 {
+      color: #66bb6a;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header img {
+        margin-top: 10px;
+      }
+
+      .resume {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="resume">
+      <div class="header">
+        <div>
+          <h1>P Y V V Sai</h1>
+          <p><strong>Email:</strong> <a href="mailto:yaswanthsai.385@gmail.com">yaswanthsai.385@gmail.com</a></p>
+          <p><strong>Phone:</strong> 9502749845</p>
+          <p><strong>Location:</strong> Bhimavaram, India</p>
+        </div>
+        <img src="yash pic.jpg" alt="Profile Picture" class="profile-img" />
+      </div>
+
+      <section>
+        <h2>About Me</h2>
+        <p>I am a passionate full-stack developer with a strong interest in building responsive web applications and user-centric solutions.</p>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li><strong>Languages:</strong> JavaScript, Python, Java</li>
+          <li><strong>Web:</strong> HTML5, CSS3</li>
+          <li><strong>Databases:</strong> MySQL</li>
+          <li><strong>Tools:</strong> VS Code</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Portfolio Website</strong> – Created a professional resume site using HTML, CSS, and JS.</li>
+          <li><strong>To-do App</strong> – Built a task manager using JavaScript and localStorage.</li>
+          <li><strong>Weather App</strong> – Fetched real-time weather data using APIs and displayed it with dynamic styling.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Learning about new things</li>
+          <li>Playing Badminton</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> yawanthsai.385@gmail.com</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/yaswanth-paruchuri-21" target="_blank">github.com/yaswanth-paruchuri-21</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yaswanth-paruchuri-a149b12b9" target="_blank">linkedin.com/in/Yaswanth Paruchuri</a></p>
+      </section>
+
+      <footer>
+        <p>© 2025 Yaswanth Paruchuri</p>
+      </footer>
+    </div>
+
+    <button id="toggle-theme">🌗 Dark Mode</button>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌗 Dark Mode';
+    });
+  </script>
+</body>
+</html>
